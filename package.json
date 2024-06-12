@@ -1,0 +1,23 @@
+{
+  "name": "sdventures-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.4"
+  },
+  "devDependencies": {
+    "gulp-terser": "^2.1.0"
+  }
+}

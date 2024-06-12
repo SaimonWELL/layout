@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Participate</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="participation">
+    <div class="participation__image">
+        <img class="participation__image-img" src="./img/main-img.png" alt="main-img">
+    </div>
+    <div class="participation__instructions">
+        <h2 class="participation__title">How to Participate</h2>
+        <ol class="participation__steps">
+            <li class="participation__step">Subscribe to our News</li>
+            <li class="participation__step">
+                <button class="participation__button" id='signup-button'>Sign Up</button>
+            </li>
+            <li class="participation__step">Check your email inbox</li>
+            <li class="participation__step">Wait till September 22</li>
+        </ol>
+    </div>
+</div>
+
+<div class="popup hidden" id="popup">
+    <div class="popup__content">
+        <button class="popup__close-button" id="close-button"><img src="./img/Union.svg" alt=""></button>
+        <form class="popup__form " id="signup-form">
+            <h2 class="popup__form-title">To register, enter the mail to which our news is sent and set your password</h2>
+            <div class="popup__form-group">
+                <div class="popup__form-group-error">
+                    <input class="popup__form-input" type="email" id="email" name="email"  placeholder="Example@email.com">
+                    <img src="img/icon-error.png" alt="error" class="popup__form-error-icon" id="email-error-icon"/>
+                </div>
+
+                <span class="popup__form-error" id="email-error"></span>
+            </div>
+            <div class="popup__form-group">
+                <div class="popup__form-group-error">
+                    <input class="popup__form-input" type="password" id="password" name="password"  placeholder="Password">
+                    <img src="img/icon-error.png" alt="error" class="popup__form-error-icon" id="password-error-icon"/>
+                </div>
+                <span class="popup__form-error" id="password-error"></span>
+            </div>
+            <button class="popup__form-submit" type="submit">submit</button>
+        </form>
+        <div class="popup__thank-you hidden" id="thank-you">
+            <h2 class="popup__thank-you--title">Thank You</h2>
+            <span class="popup__thank-you--description">To complete registration, please check your e-mail</span>
+        </div>
+    </div>
+</div>
+<script src="./js/index.js" defer></script>
+</body>
+</html>
