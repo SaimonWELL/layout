@@ -18,7 +18,9 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  @media (max-width: $breakpoint-table) {
+    justify-content: center;
+  }
 }
 h2{
   margin: 0;
@@ -36,9 +38,9 @@ input{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 90px;
   gap: 282px;
   height: 100vh;
+  margin-left: 90px;
 
   @media (max-width: $breakpoint-laptop) {
     gap: 282px;
@@ -214,6 +216,7 @@ input{
     border-radius: 6px;
     font-weight: 800;
     font-size: 23px;
+    text-transform: uppercase;
     @media (max-width: $breakpoint-laptop) {
       font-size: 18px;
     }
@@ -232,9 +235,7 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-
+  overflow: hidden;
 
   &__content {
     background: #fff;
@@ -396,4 +397,14 @@ input{
 
 .popup__form-group.error .popup__form-error-icon {
   visibility: visible;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.no-backdrop-filter {
+  background-color: rgba(255, 255, 255, 0.9);
 }

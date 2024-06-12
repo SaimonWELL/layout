@@ -1,21 +1,41 @@
+function isBackdropFilterSupported() {
+    return CSS.supports('backdrop-filter', 'blur(5px)') || CSS.supports('-webkit-backdrop-filter', 'blur(5px)');
+}
 document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.backdrop-blur');
+        if (!isBackdropFilterSupported()) {
+            elements.forEach(function(element) {
+                element.classList.remove('backdrop-blur');
+                element.classList.add('no-backdrop-filter');
+            });
+        }
+    });
+
+
+
     const signupButton = document.getElementById('signup-button');
     const popup = document.getElementById('popup');
     const closeButton = document.getElementById('close-button');
     const signupForm = document.getElementById('signup-form');
     const thankYou = document.getElementById('thank-you');
+    const body = document.getElementsByTagName('body');
 
     signupButton.addEventListener('click', () => {
         popup.classList.remove('hidden');
+        body[0].style.overflow ='hidden';
     });
 
     closeButton.addEventListener('click', () => {
         popup.classList.add('hidden');
+        body[0].style.overflow ='visible';
     });
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             popup.classList.add('hidden');
+            body[0].style.overflow ='visible';
         }
     });
 
